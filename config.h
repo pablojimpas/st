@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=16:antialias=true:autohint=true" };
-static int borderpx = 2;
+static char *font = "mono:pixelsize=18:antialias=true:autohint=true";
+static char *font2[] = { "NotoColorEmoji:pixelsize=18:antialias=true:autohint=true" };
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -559,3 +559,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
