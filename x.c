@@ -1006,8 +1006,11 @@ xloadfont(Font *f, FcPattern *pattern)
 	    XftResultMatch)) {
 		if ((XftPatternGetInteger(f->match->pattern, "weight", 0,
 		    &haveattr) != XftResultMatch) || haveattr != wantattr) {
-			f->badweight = 1;
-			fputs("font weight does not match\n", stderr);
+			if (abs(haveattr - wantattr) > max_bold_weight_infidelity) {
+				f->badweight = 1;
+			}
+			fprintf(stderr, "st: font weight does not match (%i != %i)\n",
+					haveattr, wantattr);
 		}
 	}
 

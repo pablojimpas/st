@@ -180,6 +180,9 @@ static unsigned int mousebg = 0;
  * doesn't match the ones requested.
  */
 static unsigned int defaultattr = 11;
+// If available font weight is different from fontconfig's FC_WEIGHT (200),
+// allow infidelity between the weights:
+static int max_bold_weight_infidelity = 20;
 
 /*
  * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
