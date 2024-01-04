@@ -113,44 +113,41 @@ float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-/* 8 normal colors */
-	"#FEFFD6",
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#7c6f64",
+	/* 8 normal colors */
+	"#45475A",
+	"#F38BA8",
+	"#A6E3A1",
+	"#F9E2AF",
+	"#89B4FA",
+	"#F5C2E7",
+	"#94E2D5",
+	"#BAC2DE",
 
 	/* 8 bright colors */
-	"#928374",
-	"#9d0006",
-	"#79740e",
-	"#b57614",
-	"#076678",
-	"#8f3f71",
-	"#427b58",
-	"#3c3836",
+	"#585B70",
+	"#F38BA8",
+	"#A6E3A1",
+	"#F9E2AF",
+	"#89B4FA",
+	"#F5C2E7",
+	"#94E2D5",
+	"#A6ADC8",
 
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#FEFFD6", /* 258 -> bg */
-	"#3c3836", /* 259 -> fg */
-	"#3c3836", /* 256 -> cursor */
-	"#928374", /* 257 -> rev cursor*/
+[256] = "#CDD6F4", /* default foreground colour */
+[257] = "#1E1E2E", /* default background colour */
+[258] = "#F5E0DC", /*575268*/
+
 };
 
 
 /*
- * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
 unsigned int defaultcs = 258;
-unsigned int defaultrcs = 259;
-unsigned int background = 256;
+static unsigned int defaultrcs = 258;
+unsigned int background = 257;
 
 /*
  * Default shape of cursor
